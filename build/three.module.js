@@ -25383,11 +25383,9 @@ class WebXRManager extends EventDispatcher {
 
 			// update user camera and its children
 
-			camera.position.copy( cameraVR.position );
-			camera.quaternion.copy( cameraVR.quaternion );
-			camera.scale.copy( cameraVR.scale );
+			// NEW?
+			camera.matrixWorld.copy( cameraVR.matrixWorld );
 			camera.matrix.copy( cameraVR.matrix );
-			// camera.matrixWorld.copy( cameraVR.matrixWorld );
 			camera.matrix.decompose( camera.position, camera.quaternion, camera.scale );
 
 			const children = camera.children;
