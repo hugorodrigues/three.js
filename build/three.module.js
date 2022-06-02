@@ -25379,6 +25379,8 @@ class WebXRManager extends EventDispatcher {
 
 			}
 
+
+
 			cameraVR.matrixWorld.decompose( cameraVR.position, cameraVR.quaternion, cameraVR.scale );
 
 			// update user camera and its children
